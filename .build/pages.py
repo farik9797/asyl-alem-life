@@ -48,7 +48,6 @@ ECO_CARDS = f'''<div class="recog">
           <b>Интернет-магазин ASYL ALEM</b>
           <p>Продажи и партнёрский бизнес. Финансовая аналитика, товарооборот, структура дистрибьюторов и начисления — в защищённом личном кабинете магазина.</p>
           <!-- Адрес магазина в брифе помечен «уточнить». Когда придёт — поставить ссылку здесь и в NAV. -->
-          <span class="soon" style="margin-top:1rem">Ссылка уточняется</span>
         </article>
         <article class="recogcard" data-rv>
           <span class="fi">{ic("users")}</span>
@@ -103,17 +102,15 @@ STEPS_FLOW = '''<ol class="flow">
 
 
 def contact_list(page=False):
-    """Контакты. Телефона и почты в брифе нет — на их месте пунктирные заглушки."""
+    """Контакты. Телефона и почты в брифе нет, поэтому их строк нет совсем.
+    Когда придут — добавить row("phone", ...) и row("mail", ...) первыми в список."""
     def row(icon, k, v):
         return f'''
           <li>
             <span class="fi">{ic(icon, False)}</span>
             <span><span class="k">{k}</span><span class="v">{v}</span></span>
           </li>'''
-    rows = [row("phone", "Телефон", '<em class="fill">уточняется</em>')]
-    if page:
-        rows.append(row("mail", "E-mail", '<em class="fill">уточняется</em>'))
-    rows += [
+    rows = [
         row("pin", "Адрес клуба", "Казахстан, г. Шымкент, Орынбаева 23"),
         row("clock", "График работы", "Ежедневно 9:00–20:00<em>Клубы работают круглый год</em>"),
         row("globe", "География", "Казахстан<em>В дальнейшем — и за его пределами</em>"),
@@ -451,19 +448,16 @@ CLUBS = f'''  <section class="sec">
           <span class="fi">{ic("users")}</span>
           <b>Клуб потребителей</b>
           <p>Клиенты, гости и жители региона: здоровье, общение и программы развития.</p>
-          <span class="soon" style="margin-top:1rem">Условия уточняются</span>
         </article>
         <article class="recogcard" data-rv>
           <span class="fi">{ic("briefcase")}</span>
           <b>Клуб предпринимателей</b>
           <p>Сообщество осознанных MLM-предпринимателей, программа «Будь предпринимателем».</p>
-          <span class="soon" style="margin-top:1rem">Условия уточняются</span>
         </article>
         <article class="recogcard" data-rv>
           <span class="fi">{ic("building")}</span>
           <b>Клуб основателей</b>
           <p>Основатели клубов, которые открывают и развивают клуб в своём регионе.</p>
-          <span class="soon" style="margin-top:1rem">Условия уточняются</span>
         </article>
       </div>
 {cta_box("Клуба в вашем городе ещё нет?", "Укажите город в заявке — сообщим, когда клуб откроется.")}
@@ -555,7 +549,6 @@ def event_card(kind, title, place="Шымкент, Орынбаева 23"):
           <span class="kind" style="margin-top:.875rem">{kind}</span>
           <h3 style="margin-top:.25rem">{title}</h3>
           <div class="card-meta">
-            <span>{ic("clock", False)}Дата уточняется</span>
             <span>{ic("pin", False)}{place}</span>
           </div>
         </article>'''

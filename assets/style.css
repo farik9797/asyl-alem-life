@@ -552,6 +552,3 @@ html.rv [data-rv].in{opacity:1;transform:none}
    а не показывает «Заявка получена» — иначе обращения молча терялись бы. */
 .form .msg{grid-column:1/-1;min-height:1.5em;font-size:.875rem;line-height:1.5;color:var(--gold)}
 
-/* факт, которого нет в брифе: пунктирная заглушка вместо выдуманного значения */
-.fill{padding:0 .3em;border:1px dashed currentColor;border-radius:3px;opacity:.75;font-style:normal}
-.clist em.fill,.ftr-col .fill{display:inline-block;width:auto;margin-top:.25rem;color:inherit}
