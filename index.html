@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>ASYL ALEM LIFE — сообщество развития и процветания</title>
 <meta name="description" content="Сеть региональных клубов ASYL ALEM LIFE: четыре программы развития, кабинет здоровья и центр обучения. Первый клуб в Шымкенте, запуск 15 декабря 2026 года." />
 <meta property="og:type" content="website" />
@@ -106,10 +106,15 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
 <main id="top">
 
   <!-- ================= HERO =================
-       Фотографий от заказчицы пока нет (в брифе «уточнить»), поэтому герой — фирменное
-       зелёное поле со штриховкой. Когда снимок придёт: вернуть блок .hero-media
-       с <picture>, как на сайте СДЖ, остальную разметку не трогать. -->
+       Снимок взят с сайта СДЖ Шымкент (сгенерирован, несуществующие люди).
+       Своих фото у ASYL пока нет — заменить файл, разметку не трогать. -->
   <section class="hero">
+    <div class="hero-media">
+      <picture>
+        <source srcset="assets/photo-hero.webp" type="image/webp" />
+        <img src="assets/photo-hero.jpg" alt="" width="1920" height="1080" fetchpriority="high" />
+      </picture>
+    </div>
     <div class="hero-veil"></div>
     <div class="hero-rule" id="hero-rule"></div>
 
@@ -149,25 +154,21 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
       <div class="dirs">
         <article class="dircard" data-rv>
           <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-heart-pulse"/></svg></span>
-          <span class="n">01</span>
           <h3>«Будь здоров»</h3>
           <p>Здоровье, энергия и активное долголетие.</p>
         </article>
         <article class="dircard" data-rv>
           <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-smile"/></svg></span>
-          <span class="n">02</span>
           <h3>«Будь счастлив»</h3>
           <p>Гармония, отношения и личностный рост.</p>
         </article>
         <article class="dircard" data-rv>
           <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-banknote"/></svg></span>
-          <span class="n">03</span>
           <h3>«Будь богат»</h3>
           <p>Финансовая грамотность, достаток и материальное благополучие.</p>
         </article>
         <article class="dircard" data-rv>
           <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-rocket"/></svg></span>
-          <span class="n">04</span>
           <h3>«Будь предпринимателем»</h3>
           <p>Предпринимательское мышление, лидерство и создание новых источников дохода.</p>
         </article>
@@ -217,12 +218,20 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
   <!-- ================= КЛУБЫ ================= -->
   <section class="sec rc on-dark" id="club">
     <div class="wrap">
-      <div class="sec-head" data-rv style="margin-bottom:0">
-        <span class="eyebrow on-dark">Региональные клубы</span>
-        <h2 class="h2">Каждый клуб — три зоны</h2>
-        <p class="lead" style="margin-top:1rem">Клубы работают по единым стандартам. Формат — от компактного пространства до полноценного центра. Первый клуб — в Шымкенте, Орынбаева 23.</p>
+      <div class="rc-head">
+        <div data-rv>
+          <span class="eyebrow on-dark">Региональные клубы</span>
+          <h2 class="h2">Каждый клуб — три зоны</h2>
+          <p class="lead" style="margin-top:1rem">Клубы работают по единым стандартам. Формат — от компактного пространства до полноценного центра. Первый клуб — в Шымкенте, Орынбаева 23.</p>
+          <p style="margin-top:1rem"><a class="tlink on-dark" href="clubs.html">Подробнее о клубах<svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></p>
+        </div>
+        <figure class="shot" data-rv>
+          <picture>
+            <source srcset="assets/photo-resource.webp" type="image/webp" />
+            <img src="assets/photo-resource.jpg" alt="Презентация у доски с материалами" width="960" height="720" loading="lazy" />
+          </picture>
+        </figure>
       </div>
-      <p style="margin-top:1.5rem"><a class="tlink on-dark" href="clubs.html">Подробнее о клубах<svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></p>
       <ul class="rcgrid rc3">
         <li data-rv><svg class="ic ic-lg" aria-hidden="true"><use href="#i-coffee"/></svg><b>Клуб общения и ЗОЖ</b><p>Полезные завтраки, дегустации, встречи.</p></li>
         <li data-rv><svg class="ic ic-lg" aria-hidden="true"><use href="#i-stethoscope"/></svg><b>Кабинет здоровья</b><p>Замеры, консультации специалистов по записи.</p></li>
@@ -234,9 +243,17 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
   <!-- ================= КАК ВСТУПИТЬ ================= -->
   <section class="sec sec-surface" id="how">
     <div class="wrap">
-      <div class="sec-head" data-rv>
-        <span class="eyebrow">Схема участия</span>
-        <h2 class="h2">Как стать участником</h2>
+      <div class="sec-head row">
+        <div data-rv>
+          <span class="eyebrow">Схема участия</span>
+          <h2 class="h2">Как стать участником</h2>
+        </div>
+        <figure class="shot wide" data-rv>
+          <picture>
+            <source srcset="assets/photo-network.webp" type="image/webp" />
+            <img src="assets/photo-network.jpg" alt="Деловая встреча за столиком" width="960" height="640" loading="lazy" />
+          </picture>
+        </figure>
       </div>
       <div class="flow-grid">
         <article class="flowcard" data-rv>
@@ -287,13 +304,6 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
           <p>Санаторий ASYL ARMAN, производство ASYL ARMAN HERBS, Академия MLM PRO и Фонд Asyl Arman.</p>
         </article>
       </div>
-
-      <ul class="stats" style="margin-top:2.75rem">
-        <li data-rv><span class="v" data-count="12" data-pad="2">12</span><span class="l">Месяцев в году работают клубы</span></li>
-        <li data-rv><span class="v" data-count="3" data-pad="2">03</span><span class="l">Клуба: потребителей, предпринимателей, основателей</span></li>
-        <li data-rv><span class="v" data-count="6" data-pad="2">06</span><span class="l">Направлений экосистемы ASYL ARMAN</span></li>
-        <li data-rv><span class="v">2026</span><span class="l">Год запуска сообщества</span></li>
-      </ul>
     </div>
   </section>
 

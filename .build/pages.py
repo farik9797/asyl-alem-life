@@ -18,13 +18,30 @@ def tlink(href, text, dark=False):
     return f'<a class="tlink{" on-dark" if dark else ""}" href="{href}">{text}{ic("arrow-r", False)}</a>'
 
 
+def pic(name, alt, w, h, cls="shot", rv=True):
+    """Снимок в двух форматах: WebP основным, JPEG фолбэком, как на сайте СДЖ."""
+    attr = " data-rv" if rv else ""
+    return f'''<figure class="{cls}"{attr}>
+          <picture>
+            <source srcset="assets/{name}.webp" type="image/webp" />
+            <img src="assets/{name}.jpg" alt="{alt}" width="{w}" height="{h}" loading="lazy" />
+          </picture>
+        </figure>'''
+
+
+RESOURCE = pic("photo-resource", "Презентация у доски с материалами", 960, 720)
+NETWORK = pic("photo-network", "Деловая встреча за столиком", 960, 640)
+
+
 def cta_box(title, text, white=False):
     """Закрытие внутренней страницы: заявка, а не рассылка."""
     bg = ' style="background:var(--white)"' if white else ""
     return f'''      <div class="empty" data-rv{bg}>
-        <b>{title}</b>
-        <p>{text}</p>
-        <button class="btn btn-primary" type="button" data-open-modal style="margin-top:1.25rem">Стать участником</button>
+        <div>
+          <b>{title}</b>
+          <p>{text}</p>
+        </div>
+        <button class="btn btn-primary" type="button" data-open-modal>Стать участником</button>
       </div>'''
 
 
@@ -69,9 +86,11 @@ ZONES = f'''<ul class="rcgrid rc3">
 
 
 def dircard(icon, n, title, text):
+    """n — подпись над заголовком. Номера 01–04 не ставим: программы и роли —
+    не последовательность, нумерация там была бы шаблонным приёмом."""
+    label = f'\n          <span class="n">{n}</span>' if n else ""
     return f'''        <article class="dircard" data-rv>
-          <span class="fi">{ic(icon)}</span>
-          <span class="n">{n}</span>
+          <span class="fi">{ic(icon)}</span>{label}
           <h3>{title}</h3>
           <p>{text}</p>
         </article>'''
@@ -79,10 +98,10 @@ def dircard(icon, n, title, text):
 
 PROGRAM_CARDS = "\n".join([
     '<div class="dirs">',
-    dircard("heart-pulse", "01", "«Будь здоров»", "Здоровье, энергия и активное долголетие."),
-    dircard("smile", "02", "«Будь счастлив»", "Гармония, отношения и личностный рост."),
-    dircard("banknote", "03", "«Будь богат»", "Финансовая грамотность, достаток и материальное благополучие."),
-    dircard("rocket", "04", "«Будь предпринимателем»", "Предпринимательское мышление, лидерство и создание новых источников дохода."),
+    dircard("heart-pulse", "", "«Будь здоров»", "Здоровье, энергия и активное долголетие."),
+    dircard("smile", "", "«Будь счастлив»", "Гармония, отношения и личностный рост."),
+    dircard("banknote", "", "«Будь богат»", "Финансовая грамотность, достаток и материальное благополучие."),
+    dircard("rocket", "", "«Будь предпринимателем»", "Предпринимательское мышление, лидерство и создание новых источников дохода."),
     "      </div>",
 ])
 
@@ -122,10 +141,15 @@ def contact_list(page=False):
 
 # ======================================================================
 INDEX = f'''  <!-- ================= HERO =================
-       Фотографий от заказчицы пока нет (в брифе «уточнить»), поэтому герой — фирменное
-       зелёное поле со штриховкой. Когда снимок придёт: вернуть блок .hero-media
-       с <picture>, как на сайте СДЖ, остальную разметку не трогать. -->
+       Снимок взят с сайта СДЖ Шымкент (сгенерирован, несуществующие люди).
+       Своих фото у ASYL пока нет — заменить файл, разметку не трогать. -->
   <section class="hero">
+    <div class="hero-media">
+      <picture>
+        <source srcset="assets/photo-hero.webp" type="image/webp" />
+        <img src="assets/photo-hero.jpg" alt="" width="1920" height="1080" fetchpriority="high" />
+      </picture>
+    </div>
     <div class="hero-veil"></div>
     <div class="hero-rule" id="hero-rule"></div>
 
@@ -196,12 +220,15 @@ INDEX = f'''  <!-- ================= HERO =================
   <!-- ================= КЛУБЫ ================= -->
   <section class="sec rc on-dark" id="club">
     <div class="wrap">
-      <div class="sec-head" data-rv style="margin-bottom:0">
-        <span class="eyebrow on-dark">Региональные клубы</span>
-        <h2 class="h2">Каждый клуб — три зоны</h2>
-        <p class="lead" style="margin-top:1rem">Клубы работают по единым стандартам. Формат — от компактного пространства до полноценного центра. Первый клуб — в Шымкенте, Орынбаева 23.</p>
+      <div class="rc-head">
+        <div data-rv>
+          <span class="eyebrow on-dark">Региональные клубы</span>
+          <h2 class="h2">Каждый клуб — три зоны</h2>
+          <p class="lead" style="margin-top:1rem">Клубы работают по единым стандартам. Формат — от компактного пространства до полноценного центра. Первый клуб — в Шымкенте, Орынбаева 23.</p>
+          <p style="margin-top:1rem">{tlink("clubs.html", "Подробнее о клубах", dark=True)}</p>
+        </div>
+        {RESOURCE}
       </div>
-      <p style="margin-top:1.5rem">{tlink("clubs.html", "Подробнее о клубах", dark=True)}</p>
       {ZONES}
     </div>
   </section>
@@ -209,9 +236,12 @@ INDEX = f'''  <!-- ================= HERO =================
   <!-- ================= КАК ВСТУПИТЬ ================= -->
   <section class="sec sec-surface" id="how">
     <div class="wrap">
-      <div class="sec-head" data-rv>
-        <span class="eyebrow">Схема участия</span>
-        <h2 class="h2">Как стать участником</h2>
+      <div class="sec-head row">
+        <div data-rv>
+          <span class="eyebrow">Схема участия</span>
+          <h2 class="h2">Как стать участником</h2>
+        </div>
+        {NETWORK.replace('class="shot"', 'class="shot wide"')}
       </div>
       <div class="flow-grid">
         <article class="flowcard" data-rv>
@@ -235,13 +265,6 @@ INDEX = f'''  <!-- ================= HERO =================
         <p class="lead" style="margin-top:1rem">ASYL ALEM отвечает за продажи и партнёрский бизнес, ASYL ALEM LIFE — за развитие человека, предпринимательскую культуру и сообщество. Сайт сообщества не дублирует магазин.</p>
       </div>
       {ECO_CARDS}
-
-      <ul class="stats" style="margin-top:2.75rem">
-        <li data-rv><span class="v" data-count="12" data-pad="2">12</span><span class="l">Месяцев в году работают клубы</span></li>
-        <li data-rv><span class="v" data-count="3" data-pad="2">03</span><span class="l">Клуба: потребителей, предпринимателей, основателей</span></li>
-        <li data-rv><span class="v" data-count="6" data-pad="2">06</span><span class="l">Направлений экосистемы ASYL ARMAN</span></li>
-        <li data-rv><span class="v">2026</span><span class="l">Год запуска сообщества</span></li>
-      </ul>
     </div>
   </section>
 
@@ -341,9 +364,9 @@ ABOUT = f'''  <section class="sec">
         <h2 class="h2">Зачем мы объединяем людей</h2>
       </div>
       <div class="dirs dirs-3">
-{dircard("target", "МИССИЯ", "Объединять людей в сильное сообщество", "Создавать условия для личностного роста, укрепления здоровья, финансового благополучия и реализации предпринимательского потенциала ради повышения качества жизни и совместного процветания.")}
-{dircard("globe", "ВИДЕНИЕ", "Масштабное сообщество с сетью клубов", "Стать сообществом единомышленников с сетью региональных клубов, где каждый получает возможности для развития, общения, обучения и самореализации.")}
-{dircard("sprout", "ФИЛОСОФИЯ", "Процветание человека", "Процветание человека. Благополучие семьи. Развитие общества.")}
+{dircard("target", "Миссия", "Объединять людей в сильное сообщество", "Создавать условия для личностного роста, укрепления здоровья, финансового благополучия и реализации предпринимательского потенциала ради повышения качества жизни и совместного процветания.")}
+{dircard("globe", "Видение", "Масштабное сообщество с сетью клубов", "Стать сообществом единомышленников с сетью региональных клубов, где каждый получает возможности для развития, общения, обучения и самореализации.")}
+{dircard("sprout", "Философия", "Процветание человека", "Процветание человека. Благополучие семьи. Развитие общества.")}
       </div>
     </div>
   </section>
@@ -361,8 +384,9 @@ ABOUT = f'''  <section class="sec">
           <li>{ic("check", False)}<span>Дистрибьюторы ASYL ALEM организуют деятельность и развивают клубы</span></li>
         </ul>
       </div>
-      <div data-rv>
-        <div class="sincecard">
+      <div>
+        {NETWORK}
+        <div class="sincecard" data-rv>
           <b>Без MLM</b>
           <span>Участие в клубе не требует вступления в MLM-бизнес. Описание «сообщество осознанных MLM-предпринимателей» относится только к клубу предпринимателей.</span>
         </div>
@@ -412,10 +436,13 @@ CLUBS = f'''  <section class="sec">
 
   <section class="sec rc on-dark">
     <div class="wrap">
-      <div class="sec-head" data-rv style="margin-bottom:0">
-        <span class="eyebrow on-dark">Единые стандарты</span>
-        <h2 class="h2">Три зоны в каждом клубе</h2>
-        <p class="lead" style="margin-top:1rem">Формат — от компактного пространства до полноценного центра. Набор зон в любом городе один и тот же.</p>
+      <div class="rc-head">
+        <div data-rv>
+          <span class="eyebrow on-dark">Единые стандарты</span>
+          <h2 class="h2">Три зоны в каждом клубе</h2>
+          <p class="lead" style="margin-top:1rem">Формат — от компактного пространства до полноценного центра. Набор зон в любом городе один и тот же.</p>
+        </div>
+        {RESOURCE}
       </div>
       {ZONES}
     </div>
@@ -428,10 +455,10 @@ CLUBS = f'''  <section class="sec">
         <h2 class="h2">Что есть в каждом клубе</h2>
       </div>
       <div class="dirs">
-{dircard("users", "01", "Руководитель клуба", "Отвечает за работу клуба и связь с участниками.")}
-{dircard("cap", "02", "Обученные спикеры", "Ведут программы, тренинги и мастер-классы.")}
-{dircard("calendar", "03", "Календарь мероприятий", "Расписание встреч и занятий клуба.")}
-{dircard("check", "04", "Регистрация и обратная связь", "Запись участников и отзывы о встречах.")}
+{dircard("users", "", "Руководитель клуба", "Отвечает за работу клуба и связь с участниками.")}
+{dircard("cap", "", "Обученные спикеры", "Ведут программы, тренинги и мастер-классы.")}
+{dircard("calendar", "", "Календарь мероприятий", "Расписание встреч и занятий клуба.")}
+{dircard("check", "", "Регистрация и обратная связь", "Запись участников и отзывы о встречах.")}
       </div>
     </div>
   </section>
@@ -470,7 +497,7 @@ def program_block(anchor, icon, n, title, lead, where, what, who):
     return f'''      <article class="dirblock" id="{anchor}" data-rv>
         <div class="dirblock-head">
           <span class="fi">{ic(icon)}</span>
-          <div><span class="n">{n}</span><h2>{title}</h2></div>
+          <div><h2>{title}</h2></div>
         </div>
         <p class="lead">{lead}</p>
         <div class="dirblock-grid">
@@ -583,10 +610,10 @@ EXPERTS = f'''  <section class="sec">
         <p class="lead" style="margin-top:1rem">Набор одинаковый во всех региональных клубах.</p>
       </div>
       <div class="dirs">
-{dircard("users", "01", "Руководитель клуба", "Отвечает за работу клуба, календарь мероприятий и связь с участниками.")}
-{dircard("cap", "02", "Обученные спикеры", "Ведут четыре программы развития, тренинги и мастер-классы.")}
-{dircard("stethoscope", "03", "Специалисты кабинета здоровья", "Проводят замеры и консультации по предварительной записи.")}
-{dircard("sprout", "04", "Основатели клубов", "Открывают и развивают клубы в своих регионах.")}
+{dircard("users", "", "Руководитель клуба", "Отвечает за работу клуба, календарь мероприятий и связь с участниками.")}
+{dircard("cap", "", "Обученные спикеры", "Ведут четыре программы развития, тренинги и мастер-классы.")}
+{dircard("stethoscope", "", "Специалисты кабинета здоровья", "Проводят замеры и консультации по предварительной записи.")}
+{dircard("sprout", "", "Основатели клубов", "Открывают и развивают клубы в своих регионах.")}
       </div>
     </div>
   </section>
@@ -619,10 +646,10 @@ STORIES = f'''  <section class="sec">
         <p class="lead" style="margin-top:1rem">Реальные истории участников по четырём направлениям — только настоящие и только с их согласия.</p>
       </div>
       <div class="dirs">
-{dircard("heart-pulse", "01", "Здоровье", "Что изменилось после кабинета здоровья и программы «Будь здоров».")}
-{dircard("smile", "02", "Отношения", "Как программа «Будь счастлив» повлияла на жизнь и семью.")}
-{dircard("banknote", "03", "Финансы", "Что дала финансовая грамотность и программа «Будь богат».")}
-{dircard("rocket", "04", "Своё дело", "Как участники клуба предпринимателей начали и развили бизнес.")}
+{dircard("heart-pulse", "", "Здоровье", "Что изменилось после кабинета здоровья и программы «Будь здоров».")}
+{dircard("smile", "", "Отношения", "Как программа «Будь счастлив» повлияла на жизнь и семью.")}
+{dircard("banknote", "", "Финансы", "Что дала финансовая грамотность и программа «Будь богат».")}
+{dircard("rocket", "", "Своё дело", "Как участники клуба предпринимателей начали и развили бизнес.")}
       </div>
       <!-- Ни одной истории, цитаты, имени или фото участника в брифе нет. -->
 {cta_box("Историй пока нет", "Сообщество запускается 15 декабря 2026 года. Отзывов и историй, которых не было, здесь не появится — станьте участником, и ваша история может стать одной из первых.")}

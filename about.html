@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>О сообществе — ASYL ALEM LIFE</title>
 <meta name="description" content="Миссия, видение и философия ASYL ALEM LIFE, кому открыты клубы и как сообщество связано с экосистемой ASYL ARMAN." />
 <meta property="og:type" content="website" />
@@ -124,19 +124,19 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
       <div class="dirs dirs-3">
         <article class="dircard" data-rv>
           <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-target"/></svg></span>
-          <span class="n">МИССИЯ</span>
+          <span class="n">Миссия</span>
           <h3>Объединять людей в сильное сообщество</h3>
           <p>Создавать условия для личностного роста, укрепления здоровья, финансового благополучия и реализации предпринимательского потенциала ради повышения качества жизни и совместного процветания.</p>
         </article>
         <article class="dircard" data-rv>
           <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-globe"/></svg></span>
-          <span class="n">ВИДЕНИЕ</span>
+          <span class="n">Видение</span>
           <h3>Масштабное сообщество с сетью клубов</h3>
           <p>Стать сообществом единомышленников с сетью региональных клубов, где каждый получает возможности для развития, общения, обучения и самореализации.</p>
         </article>
         <article class="dircard" data-rv>
           <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-sprout"/></svg></span>
-          <span class="n">ФИЛОСОФИЯ</span>
+          <span class="n">Философия</span>
           <h3>Процветание человека</h3>
           <p>Процветание человека. Благополучие семьи. Развитие общества.</p>
         </article>
@@ -157,8 +157,14 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
           <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Дистрибьюторы ASYL ALEM организуют деятельность и развивают клубы</span></li>
         </ul>
       </div>
-      <div data-rv>
-        <div class="sincecard">
+      <div>
+        <figure class="shot" data-rv>
+          <picture>
+            <source srcset="assets/photo-network.webp" type="image/webp" />
+            <img src="assets/photo-network.jpg" alt="Деловая встреча за столиком" width="960" height="640" loading="lazy" />
+          </picture>
+        </figure>
+        <div class="sincecard" data-rv>
           <b>Без MLM</b>
           <span>Участие в клубе не требует вступления в MLM-бизнес. Описание «сообщество осознанных MLM-предпринимателей» относится только к клубу предпринимателей.</span>
         </div>
@@ -209,9 +215,11 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
         </article>
       </div>
       <div class="empty" data-rv>
-        <b>Хотите в клуб?</b>
-        <p>Оставьте заявку — подскажем ближайший клуб и первую встречу.</p>
-        <button class="btn btn-primary" type="button" data-open-modal style="margin-top:1.25rem">Стать участником</button>
+        <div>
+          <b>Хотите в клуб?</b>
+          <p>Оставьте заявку — подскажем ближайший клуб и первую встречу.</p>
+        </div>
+        <button class="btn btn-primary" type="button" data-open-modal>Стать участником</button>
       </div>
     </div>
   </section>

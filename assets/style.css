@@ -101,7 +101,6 @@ ul,ol{list-style:none;padding:0}
 /* ---------- шапка ---------- */
 .hdr{position:sticky;top:0;z-index:60;background:var(--white);border-bottom:1px solid var(--line);
   box-shadow:0 1px 0 rgba(39,46,15,.03)}
-.hdr::before{content:"";display:block;height:3px;background:var(--gold)}
 .hdr-in{display:flex;align-items:center;gap:1.5rem;height:4.75rem}
 .brand{display:flex;align-items:center;gap:.75rem;flex:none}
 .brand img{width:2.75rem;height:2.75rem;object-fit:contain}
@@ -145,9 +144,8 @@ ul,ol{list-style:none;padding:0}
 .hero-media{position:absolute;inset:0;z-index:-3;background:var(--navy);overflow:hidden}
 .hero-media picture{display:block;width:100%;height:100%}
 .hero-media img{width:100%;height:100%;object-fit:cover;opacity:.82}
-/* Вуаль отдельным слоем: штриховка официального бланка поверх снимка */
+/* Вуаль: затемнение слева под текст, справа снимок читается */
 .hero-veil{position:absolute;inset:0;z-index:-2;background:
-  repeating-linear-gradient(112deg,rgba(255,255,255,.05) 0 1px,transparent 1px 14px),
   linear-gradient(100deg,rgba(22,26,7,.90) 0%,rgba(22,26,7,.74) 38%,rgba(39,46,15,.40) 72%,rgba(39,46,15,.28) 100%)}
 .hero-rule{position:absolute;left:0;bottom:0;height:3px;width:22%;z-index:-1;background:var(--gold);
   transform-origin:left}
@@ -173,14 +171,11 @@ ul,ol{list-style:none;padding:0}
 @media (min-width:40rem){.dirs{grid-template-columns:repeat(2,1fr)}}
 .dircard{position:relative;background:var(--white);border:1px solid var(--line);padding:2rem 1.75rem;
   overflow:hidden;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
-.dircard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);
-  transform:scaleY(0);transform-origin:top;transition:transform .3s var(--ease-out)}
 
 .dircard .fi{width:3rem;height:3rem;display:grid;place-items:center;background:var(--surface);color:var(--brand);
   transition:background-color .25s ease,color .25s ease}
 @media (hover:hover) and (pointer:fine){
   .dircard:hover{border-color:#bfb8a1;box-shadow:var(--sh-md);transform:translateY(-2px)}
-  .dircard:hover::before{transform:scaleY(1)}
   .dircard:hover .fi{background:var(--navy);color:var(--beige)}
 }
 .dircard .n{display:block;font-size:.75rem;font-weight:800;letter-spacing:.18em;color:var(--ink-mute);margin-top:1.375rem}
@@ -193,7 +188,7 @@ ul,ol{list-style:none;padding:0}
 .checks{margin-top:1.75rem;display:flex;flex-direction:column;gap:.875rem}
 .checks li{display:grid;grid-template-columns:1.375rem 1fr;gap:.75rem;font-size:.9375rem;line-height:1.6}
 .checks .ic{width:1.375rem;height:1.375rem;color:var(--brand);margin-top:.125rem}
-.chair{display:grid;gap:1.25rem;border:1px solid var(--line);border-left:3px solid var(--gold);
+.chair{display:grid;gap:1.25rem;border:1px solid var(--line);
   padding:1.5rem;background:var(--white)}
 /* Портрет сбоку, а не сверху: карточка читается как официальная справка.
    Рядом с текстом встаёт только с 40rem — раньше на портрет в 15rem
@@ -228,8 +223,6 @@ ul,ol{list-style:none;padding:0}
 
 /* ---------- ресурсный центр ---------- */
 .rc{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.rc::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:repeating-linear-gradient(112deg,rgba(255,255,255,.04) 0 1px,transparent 1px 16px)}
 .rc .wrap{position:relative}
 .rcgrid{display:grid;gap:1px;margin-top:3rem;background:rgba(255,255,255,.16)}
 @media (min-width:40rem){.rcgrid{grid-template-columns:repeat(2,1fr)}}
@@ -395,8 +388,6 @@ html.rv [data-rv].in{opacity:1;transform:none}
 .mnav a[aria-current="page"]{color:var(--brand)}
 
 .page-head{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding-block:2.75rem 3.25rem}
-.page-head::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:repeating-linear-gradient(112deg,rgba(255,255,255,.05) 0 1px,transparent 1px 14px)}
 .page-head::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:22%;background:var(--gold)}
 .page-head .wrap{position:relative}
 .page-head h1{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.12;letter-spacing:-.02em;margin-top:.75rem}
@@ -448,7 +439,7 @@ html.rv [data-rv].in{opacity:1;transform:none}
 .cpage .clist a{color:var(--brand)}
 .cpage .form{background:var(--navy-deep);border-color:rgba(255,255,255,.16);color:#fff}
 
-/* метаданные в карточке-заглушке (дата и место уточняются) */
+/* метаданные в карточке-заглушке */
 .card-meta{margin-top:1rem;display:flex;flex-direction:column;gap:.4375rem}
 .card-meta span{display:flex;align-items:center;gap:.5rem;font-size:.875rem;color:var(--ink-soft)}
 .card-meta .ic{width:1rem;height:1rem;color:var(--ink-mute)}
@@ -552,3 +543,164 @@ html.rv [data-rv].in{opacity:1;transform:none}
    а не показывает «Заявка получена» — иначе обращения молча терялись бы. */
 .form .msg{grid-column:1/-1;min-height:1.5em;font-size:.875rem;line-height:1.5;color:var(--gold)}
 
+
+/* ============================================================
+   Отделка по Apple HIG
+   Сетка и компоненты — как у СДЖ. Этот слой отвечает за детали:
+   типографику и воздух, скругления, зоны касания от 44px, поля 16px
+   (меньше — iOS приближает страницу при фокусе), видимый фокус на тёмном,
+   отказ от капс-надписей с разрядкой. Карточки — либо тонкая рамка,
+   либо тень с размытием до 8px, но не обе широкие сразу.
+   ============================================================ */
+:root{
+  --card:#ffffff;
+  --r-btn:980px;               /* пилюля, как у кнопок Apple */
+  --r-card:16px;
+  --r-field:12px;
+  --hair:rgba(39,46,15,.10);   /* тонкая рамка карточек */
+  --sh-md:0 4px 8px rgba(39,46,15,.10);
+  --sh-hover:0 6px 8px -2px rgba(39,46,15,.12);
+}
+html{-webkit-tap-highlight-color:transparent;scroll-padding-top:5rem}
+body{font-size:1.0625rem;line-height:1.6}
+a,button,summary,label,select{touch-action:manipulation}
+select{font:inherit;color:inherit}
+
+/* Фокус красится контекстным акцентом: зелёный на светлом, бежевый на тёмном.
+   Раньше он всегда был зелёным и на зелёных блоках пропадал. */
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:inherit}
+
+/* поля по краям — с учётом выреза и закруглений экрана iPhone */
+.wrap{padding-inline:max(1.25rem,env(safe-area-inset-left)) max(1.25rem,env(safe-area-inset-right))}
+@media (min-width:48rem){.wrap{padding-inline:max(2rem,env(safe-area-inset-left)) max(2rem,env(safe-area-inset-right))}}
+
+/* воздух между секциями */
+.sec{padding-block:4.5rem}
+@media (min-width:48rem){.sec{padding-block:6rem}}
+@media (min-width:64rem){.sec{padding-block:7rem}}
+
+/* ---------- типографика ---------- */
+.h2{font-size:clamp(1.875rem,4vw,2.875rem);font-weight:700;line-height:1.12;letter-spacing:-.025em;text-wrap:balance}
+.lead{font-size:1.0625rem;line-height:1.6;max-width:40rem;text-wrap:pretty}
+@media (min-width:48rem){.lead{font-size:1.1875rem}}
+.sec-head{margin-bottom:3.5rem}
+/* надпись над заголовком — обычным регистром, без разрядки и чёрточки */
+.eyebrow{font-size:.9375rem;font-weight:600;letter-spacing:0;text-transform:none;margin-bottom:.625rem}
+.eyebrow::before{display:none}
+/* все мелкие подписи — тоже без капса и разрядки */
+.chair .lbl,.clist .k,.ftr h3,.dirblock-grid h3,.mnav .mgroup > span,.reqs .k,.dircard .n,.dirblock-head .n{
+  letter-spacing:0;text-transform:none;font-size:.875rem;font-weight:600}
+.dircard .n{color:var(--brand)}
+.soon{letter-spacing:0;text-transform:none;font-size:.8125rem;font-weight:600;border-radius:var(--r-btn);
+  padding:.25rem .75rem;border:0}
+.dirblock-grid h3{color:var(--ink)}
+
+/* ---------- кнопки и ссылки ---------- */
+.btn{min-height:3rem;padding:.75rem 1.5rem;font-size:1rem;font-weight:600}
+.btn-sm{min-height:2.75rem;padding:.625rem 1.125rem;font-size:.9375rem}
+.btn-outline{background:var(--card)}
+/* текстовая ссылка «Подробнее»: была 25px в высоту — теперь 44 */
+.tlink{min-height:2.75rem;font-weight:600}
+
+/* ---------- шапка: полупрозрачная, как у Apple ---------- */
+.hdr{background:rgba(242,242,242,.82);border-bottom:1px solid var(--hair);box-shadow:none;
+  -webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hdr{background:var(--white)}}
+.hdr-in{height:4rem}
+.brand{min-height:2.75rem}
+.brand b{font-weight:700}
+.brand span{font-size:.75rem;letter-spacing:0;text-transform:none;font-weight:500}
+.nav a,.nav-toggle{font-weight:500}
+.burger{width:2.75rem;height:2.75rem;border-radius:var(--r-field)}
+.mnav{inset:4.0625rem 0 auto;border-radius:0 0 var(--r-card) var(--r-card);box-shadow:var(--sh-md)}
+.mnav a{font-weight:600;min-height:2.75rem}
+.nav-sub{border:1px solid var(--hair);border-radius:14px;box-shadow:var(--sh-md);padding:.375rem}
+.nav-sub a{border-radius:10px}
+
+/* ---------- герой ---------- */
+.hero h1{font-size:clamp(2.25rem,5.2vw,3.75rem);font-weight:700;line-height:1.08;letter-spacing:-.03em;text-wrap:balance}
+.hero-lead{font-size:1.0625rem;line-height:1.6;max-width:36rem}
+@media (min-width:48rem){.hero-lead{font-size:1.1875rem}}
+.hero-strip b{font-size:1.5rem;font-weight:700}
+.hero-strip span{font-size:.875rem;color:rgba(255,255,255,.7)}
+
+/* ---------- карточки ---------- */
+.dircard,.flowcard,.recogcard,.ncard,.chair{background:var(--card);border:1px solid var(--hair);border-radius:var(--r-card)}
+@media (hover:hover) and (pointer:fine){
+  .dircard:hover{border-color:var(--hair);box-shadow:var(--sh-hover);transform:translateY(-2px)}
+}
+.dircard .fi,.flowcard h3 .fi,.recogcard .fi{border-radius:var(--r-field)}
+.dircard h3,.recogcard b,.ncard h3,.flowcard h3{font-weight:700}
+.dircard p,.ncard p,.recogcard p,.chair p{font-size:1rem;line-height:1.6}
+.chair{overflow:hidden}
+.chair-shot{border-radius:var(--r-field)}
+.sincecard{border-radius:var(--r-card)}
+.sincecard b{font-weight:700}
+.dirblock-head .fi{border-radius:var(--r-field)}
+.dirblock-head h2{font-weight:700}
+.dirblock-grid li{font-size:1rem}
+.checks li{font-size:1rem}
+.flow li{font-size:1rem}
+
+/* снимки — со скруглением, без рамки поверх фото */
+.shot{border-radius:var(--r-card)}
+.rc .shot{border:0}
+
+/* три зоны клуба: отдельными плитками, а не таблицей на тёмном */
+.rcgrid{gap:.75rem;background:none}
+.rcgrid li{background:rgba(255,255,255,.06);border-radius:var(--r-card)}
+.rcgrid b{font-size:1.0625rem}
+
+/* ---------- вопросы ---------- */
+.acc summary{min-height:3.5rem;font-size:1.0625rem;font-weight:600}
+.acc .body{font-size:1rem;line-height:1.65}
+
+/* ---------- закрытие страницы: текст слева, кнопка справа ---------- */
+.empty{border:0;border-radius:var(--r-card);padding:2rem}
+.empty > div{flex:1 1 22rem}
+.empty p{max-width:36rem}
+
+/* ---------- формы ---------- */
+.form{border-radius:var(--r-card)}
+.form label{font-size:.875rem;font-weight:600}
+/* 16px — минимум, при котором Safari на iPhone не приближает страницу */
+.form input,.form textarea,.form select{font-size:1rem;border-radius:var(--r-field);min-height:3.25rem}
+.form textarea{min-height:6.5rem}
+.form .note{font-size:.8125rem}
+.modal-panel{border-radius:var(--r-card)}
+.modal-head h2{font-weight:700}
+.modal-x{width:2.75rem;height:2.75rem;border-radius:50%}
+/* На телефоне окно заявки — шторка снизу, как системные листы iOS */
+@media (max-width:40rem){
+  .modal{align-items:flex-end;padding:0}
+  .modal-panel{border-radius:var(--r-card) var(--r-card) 0 0;max-height:92svh;
+    padding-bottom:calc(1.75rem + env(safe-area-inset-bottom));animation:m-sheet .32s var(--ease-out)}
+}
+@keyframes m-sheet{from{transform:translateY(100%)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.modal-panel{animation:none}}
+
+/* ---------- контакты ---------- */
+.clist .fi{border-radius:var(--r-field)}
+.clist .k{color:rgba(255,255,255,.7)}
+
+/* ---------- шапка страниц и крошки ---------- */
+.page-head{padding-block:2.5rem 3.5rem}
+.page-head h1{font-size:clamp(2rem,4.4vw,3.25rem);font-weight:700;letter-spacing:-.03em;text-wrap:balance}
+.page-head p{font-size:1.0625rem;line-height:1.6;max-width:40rem}
+@media (min-width:48rem){.page-head p{font-size:1.1875rem}}
+.crumbs{font-size:.875rem;gap:.375rem}
+.crumbs a{display:inline-flex;align-items:center;min-height:2.75rem}
+.crumbs .sep{color:rgba(255,255,255,.62)}
+.crumbs span[aria-current]{color:rgba(255,255,255,.7)}
+
+/* ---------- подвал ---------- */
+.ftr h3{color:rgba(255,255,255,.7)}
+.ftr-col a{font-size:.9375rem}
+.ftr-about{font-size:.9375rem}
+/* на сенсорных экранах ссылки подвала — под палец */
+@media (pointer:coarse){
+  .ftr-col ul{gap:0}
+  .ftr-col a{display:inline-flex;align-items:center;min-height:2.75rem}
+}
+/* фокус в полях заметнее: свечение было на 18% и на зелёном почти не читалось */
+.form input:focus,.form textarea:focus,.form select:focus{box-shadow:0 0 0 3px rgba(var(--gold-rgb),.35)}
