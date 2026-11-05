@@ -5,6 +5,8 @@
 
 Планируемый домен — `asylalemlife.com`. Запуск сообщества 15 декабря 2026 года.
 
+Превью: **https://farik9797.github.io/asyl-alem-life/**
+
 ## Стек
 
 Статический HTML без сборщика: восемь страниц с общими `tokens.css`, `base.css`
