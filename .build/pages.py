@@ -144,26 +144,24 @@ INDEX = f'''  <!-- ================= HERO =================
        Снимок взят с сайта СДЖ Шымкент (сгенерирован, несуществующие люди).
        Своих фото у ASYL пока нет — заменить файл, разметку не трогать. -->
   <section class="hero">
-    <div class="hero-media">
-      <picture>
-        <source srcset="assets/photo-hero.webp" type="image/webp" />
-        <img src="assets/photo-hero.jpg" alt="" width="1920" height="1080" fetchpriority="high" />
-      </picture>
-    </div>
-    <div class="hero-veil"></div>
-    <div class="hero-rule" id="hero-rule"></div>
-
     <div class="wrap hero-in">
       <div>
-        <span class="eyebrow on-dark" data-hero>Здоровье · Гармония отношений · Благосостояние · Бизнес</span>
+        <span class="eyebrow" data-hero>Здоровье · Гармония отношений · Благосостояние · Бизнес</span>
         <h1 data-hero>Пространство роста, единства и <span class="gold">созидания</span></h1>
         <p class="hero-lead" data-hero>Мы объединяем людей, которые стремятся к осознанной жизни, личностному росту и предпринимательскому развитию. В наших региональных клубах вы найдёте знания, поддержку, общение и возможности для реализации своего потенциала.</p>
         <div class="hero-cta" data-hero>
-          <button class="btn btn-gold" type="button" data-open-modal>Стать участником</button>
-          <a class="btn btn-ghost-light" href="clubs.html">Наши клубы</a>
+          <button class="btn btn-primary" type="button" data-open-modal>Стать участником</button>
+          <a class="btn btn-outline" href="clubs.html">Наши клубы</a>
         </div>
       </div>
+      <div class="hero-media" data-hero>
+        <picture>
+          <source srcset="assets/photo-hero.webp" type="image/webp" />
+          <img src="assets/photo-hero.jpg" alt="" width="1920" height="1080" fetchpriority="high" />
+        </picture>
+      </div>
     </div>
+    <div class="hero-rule" id="hero-rule"></div>
 
     <div class="hero-strip">
       <div class="wrap">
@@ -338,10 +336,10 @@ INDEX = f'''  <!-- ================= HERO =================
   </section>
 
   <!-- ================= КОНТАКТЫ ================= -->
-  <section class="sec contact on-dark" id="contacts">
+  <section class="sec contact" id="contacts">
     <div class="wrap cgrid">
       <div data-rv>
-        <span class="eyebrow on-dark">Контакты</span>
+        <span class="eyebrow">Контакты</span>
         <h2 class="h2">Стать участником</h2>
         <p class="lead" style="margin-top:1rem">Оставьте заявку — подскажем ближайший клуб и встречу. Участие в клубе не требует вступления в MLM-бизнес.</p>
         {contact_list()}

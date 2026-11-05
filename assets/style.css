@@ -33,7 +33,7 @@
   --sh-md:0 4px 6px -1px rgba(39,46,15,.07), 0 12px 24px -8px rgba(39,46,15,.12);
 }
 /* тёмные блоки: акцент переключается на бежевый */
-.hero,.rc,.sincecard,.modal-panel,.contact,.ftr,.page-head,.cpage .form,.on-dark{
+.rc,.sincecard,.modal-panel,.contact .form,.ftr,.cpage .form,.on-dark{
   --gold:#ded8c6;--gold-ink:#272e0f;--gold-hover:#f2f2f2;--gold-rgb:222,216,198}
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
@@ -704,3 +704,34 @@ select{font:inherit;color:inherit}
 }
 /* фокус в полях заметнее: свечение было на 18% и на зелёном почти не читалось */
 .form input:focus,.form textarea:focus,.form select:focus{box-shadow:0 0 0 3px rgba(var(--gold-rgb),.35)}
+
+/* ---------- светлая версия (05.11.2026, «больше белого») ----------
+   Зелёными остались только акценты: блок клуба, карточка «Без MLM», формы
+   и подвал. Герой, шапки страниц и контакты — на белом и бежевом. */
+.hero{background:var(--white);color:var(--ink)}
+.hero-in{align-items:center;padding-block:2.5rem 3rem}
+@media (min-width:64rem){.hero-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4rem;padding-block:4.5rem 5rem}}
+.hero-media{position:relative;inset:auto;z-index:auto;aspect-ratio:4/3;border-radius:var(--r-card);background:var(--surface)}
+.hero-media img{opacity:1;object-position:65% center}
+.hero h1{color:var(--ink)}
+.hero-lead{color:var(--ink-soft)}
+.hero-strip{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero-strip b{color:var(--navy)}
+.hero-strip span{color:var(--ink-mute)}
+@media (min-width:48rem){.hero-strip li+li{border-left-color:var(--line)}}
+
+.page-head{background:var(--white);color:var(--ink);border-bottom:1px solid var(--line)}
+.page-head h1{color:var(--ink)}
+.page-head p{color:var(--ink-soft)}
+.crumbs,.crumbs .sep,.crumbs span[aria-current]{color:var(--ink-mute)}
+.crumbs a{color:var(--ink-soft)}
+@media (hover:hover) and (pointer:fine){.crumbs a:hover{color:var(--brand)}}
+
+.contact{background:var(--surface);color:var(--ink)}
+.contact::before{display:none}
+.contact .clist .fi{border-color:var(--line);color:var(--brand)}
+.contact .clist .k{color:var(--ink-mute)}
+.contact .clist .v{color:var(--ink)}
+.contact .clist em{color:var(--ink-soft)}
+.contact .clist a{color:var(--brand)}
+.contact .form{background:var(--navy-deep);border-color:rgba(255,255,255,.16);color:#fff}
