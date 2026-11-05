@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Афиша событий: ASYL ALEM LIFE</title>
+<meta name="description" content="Встречи, тренинги и мастер-классы клубов ASYL ALEM LIFE. Календарь первого клуба выйдет на сайт до запуска 15 декабря 2026 года." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="top field">
+  <div class="container top__in">
+    <a class="wordmark" href="index.html" aria-label="ASYL ALEM LIFE, на главную">ASYL ALEM LIFE</a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu">Меню</button>
+
+    <nav class="menu" id="menu" aria-label="Основная навигация">
+      <a href="about.html">О сообществе</a>
+      <a href="clubs.html">Клубы</a>
+      <a href="programs.html">Программы</a>
+      <a href="events.html" aria-current="page">События</a>
+      <a href="index.html#eco">Экосистема</a>
+    </nav>
+
+    <a class="btn btn--quiet top__cta" href="join.html">Стать участником</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="phero field">
+    <div class="container">
+      <h1>Афиша откроется вместе с клубом</h1>
+      <p class="lead">Расписание встреч появится здесь к запуску <time datetime="2026-12-15">15 декабря 2026 года</time>.</p>
+    </div>
+  </section>
+
+  <section class="sec sec--first">
+    <div class="container">
+      <div class="head">
+        <h2>Что будет в афише</h2>
+        <p class="lead">У каждого клуба свой календарь мероприятий.</p>
+      </div>
+      <ul class="guide">
+        <li>
+          <h3>Встречи клуба</h3>
+          <p>Полезные завтраки, дегустации и общение участников.</p>
+        </li>
+        <li>
+          <h3>Тренинги</h3>
+          <p>Занятия по четырём программам развития: от вводного курса до углублённого уровня.</p>
+        </li>
+        <li>
+          <h3>Мастер-классы</h3>
+          <p>Практические занятия, которые ведут обученные спикеры клуба.</p>
+        </li>
+        <li>
+          <h3>Приём в кабинете здоровья</h3>
+          <p>Замеры и консультации специалистов по предварительной записи.</p>
+        </li>
+      </ul>
+      <!-- Расписание: ни одной даты, площадки и названия мероприятия в брифе нет.
+           Публиковать их можно только после того, как заказчица пришлёт календарь. -->
+      <p class="note">Конкретных дат пока нет: календарь первого клуба собирается и выйдет на сайт до запуска. Выдуманных анонсов здесь не будет.</p>
+    </div>
+  </section>
+
+  <section class="sec sec--warm sec--wide">
+    <div class="container claim-grid">
+      <p class="claim">У сообщества нет сезона. Клубы работают круглый год.</p>
+      <p class="claim__line">Встречи, тренинги и мастер-классы идут все двенадцать месяцев, без перерывов на лето и праздники.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="container join">
+      <div class="join__say">
+        <h2>Стать участником</h2>
+        <p class="note">Оставьте заявку, и приглашение на первую встречу придёт раньше, чем афиша появится на сайте.</p>
+        <ol class="steps">
+          <li>Оставить заявку на сайте</li>
+          <li>Выбрать клуб в своём городе</li>
+          <li>Прийти на встречи и программы</li>
+        </ol>
+      </div>
+      <div class="join__say">
+        <p class="claim claim--sm">Первый клуб открывается в Шымкенте, Орынбаева 23.</p>
+        <p class="note">Ежедневно с 9:00 до 20:00. Запуск сообщества <time datetime="2026-12-15">15 декабря 2026 года</time>.</p>
+        <p class="actions"><a class="btn btn--primary" href="join.html">Оставить заявку</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot field">
+  <div class="container">
+    <p class="foot__sign">ASYL ALEM LIFE</p>
+    <p class="foot__line">Объединяемся, развиваемся, процветаем.</p>
+
+    <nav class="foot__nav" aria-label="Разделы сайта">
+      <a href="about.html">О сообществе</a>
+      <a href="clubs.html">Наши клубы</a>
+      <a href="programs.html">Программы развития</a>
+      <a href="events.html" aria-current="page">Афиша событий</a>
+      <a href="experts.html">Эксперты и наставники</a>
+      <a href="stories.html">Истории участников</a>
+      <a href="join.html">Стать участником</a>
+    </nav>
+
+    <p class="foot__legal">ТОО «ASYL ALEM LIFE». Казахстан, Шымкент, Орынбаева 23. Ежедневно с 9:00 до 20:00.</p>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(() => {
+  const burger = document.querySelector('.burger');
+  const menu = document.getElementById('menu');
+  if (!burger || !menu) return;
+  const set = (open) => {
+    burger.setAttribute('aria-expanded', String(open));
+    menu.classList.toggle('is-open', open);
+  };
+  burger.addEventListener('click', () => set(burger.getAttribute('aria-expanded') !== 'true'));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') { set(false); burger.focus(); }
+  });
+})();
+
+(() => {
+  for (const form of document.querySelectorAll('form[data-endpoint]')) {
+    const help = form.querySelector('[aria-live]');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let bad = null;
+      for (const el of form.querySelectorAll('[required]')) {
+        const ok = el.checkValidity() && el.value.trim() !== '';
+        el.toggleAttribute('aria-invalid', !ok);
+        if (!ok && !bad) bad = el;
+      }
+      if (bad) { help.textContent = 'Заполните обязательные поля: имя и телефон.'; bad.focus(); return; }
+      if (!form.dataset.endpoint) {
+        help.textContent = 'Заявка никуда не ушла: форма пока не подключена к почте.';
+        return;
+      }
+      fetch(form.dataset.endpoint, { method: 'POST', body: new FormData(form) })
+        .then((r) => { help.textContent = r.ok ? 'Заявка получена, свяжемся в рабочее время.' : 'Не отправилось. Попробуйте через минуту.'; })
+        .catch(() => { help.textContent = 'Не отправилось. Попробуйте через минуту.'; });
+    });
+  }
+})();
+</script>
+</body>
+</html>
