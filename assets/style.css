@@ -744,3 +744,18 @@ select{font:inherit;color:inherit}
 .rcgrid p{color:var(--ink-soft)}
 /* контакты идут после бежевого блока — теперь на белом */
 .contact{background:var(--white)}
+
+/* ---------- кнопки заметнее (05.11.2026) ----------
+   Крупнее, с плотной тенью под заливкой; контурная — фирменной рамкой.
+   Рамка и тень не сочетаются на одной кнопке. */
+.btn{min-height:3.25rem;padding:.875rem 1.875rem;font-size:1.0625rem;font-weight:700;
+  transition:background-color .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease,transform .16s var(--ease-out)}
+.btn-sm{min-height:2.75rem;padding:.625rem 1.25rem;font-size:.9375rem}
+.btn-primary,.btn-gold{box-shadow:0 4px 8px -2px rgba(29,34,9,.35)}
+.btn-outline{border:2px solid var(--brand);color:var(--brand);background:var(--card)}
+@media (hover:hover) and (pointer:fine){
+  .btn-primary:hover,.btn-gold:hover{transform:translateY(-2px);box-shadow:0 6px 8px -2px rgba(29,34,9,.4)}
+  .btn-outline:hover{background:var(--brand);color:#fff;transform:translateY(-2px)}
+}
+.btn:active{transform:scale(.97);box-shadow:none}
+@media (prefers-reduced-motion:reduce){.btn,.btn:hover,.btn:active{transform:none}}
