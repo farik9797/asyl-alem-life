@@ -1,268 +1,540 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ASYL ALEM LIFE: сообщество развития и процветания</title>
+<title>ASYL ALEM LIFE — сообщество развития и процветания</title>
 <meta name="description" content="Сеть региональных клубов ASYL ALEM LIFE: четыре программы развития, кабинет здоровья и центр обучения. Первый клуб в Шымкенте, запуск 15 декабря 2026 года." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ru_KZ" />
+<meta property="og:site_name" content="ASYL ALEM LIFE" />
+<meta property="og:title" content="Пространство роста, единства и созидания" />
+<meta property="og:description" content="Сеть региональных клубов ASYL ALEM LIFE: четыре программы развития, кабинет здоровья и центр обучения. Первый клуб в Шымкенте, запуск 15 декабря 2026 года." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script>
+/* Флаг ставим до первой отрисовки, иначе контент мелькнёт до старта reveal.
+   Без JS класс не появится — весь контент останется видимым. */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window)
+  document.documentElement.className += ' rv';
+</script>
+<link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<a class="skip" href="#main">К содержанию</a>
 
-<header class="top field">
-  <div class="container top__in">
-    <a class="wordmark" href="index.html" aria-label="ASYL ALEM LIFE, на главную">ASYL ALEM LIFE</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+  <symbol id="i-scale-doc" viewBox="0 0 24 24"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+  <symbol id="i-banknote" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-trend-up" viewBox="0 0 24 24"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+  <symbol id="i-heart-pulse" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /> <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" /></symbol>
+  <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M8 14s1.5 2 4 2 4-2 4-2" /> <line x1="9" x2="9.01" y1="9" y2="9" /> <line x1="15" x2="15.01" y1="9" y2="9" /></symbol>
+  <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M10 2v2" /> <path d="M14 2v2" /> <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" /> <path d="M6 2v2" /></symbol>
+  <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M11 2v2" /> <path d="M5 2v2" /> <path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" /> <path d="M8 15a6 6 0 0 0 12 0v-3" /> <circle cx="20" cy="10" r="2" /></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /> <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /> <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /> <path d="M2 7h20" /> <path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2" /> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10" /> <path d="M10 20c5.5-2.5.8-6.4 3-10" /> <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" /> <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" /></symbol>
+</svg>
 
-    <button class="burger" type="button" aria-expanded="false" aria-controls="menu">Меню</button>
 
-    <nav class="menu" id="menu" aria-label="Основная навигация">
-      <a href="about.html">О сообществе</a>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top" aria-label="ASYL ALEM LIFE — на главную">
+      <span><b>ASYL ALEM LIFE</b><span>Сообщество развития</span></span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <div class="nav-group">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="sub-about">О сообществе<svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
+        <div class="nav-sub" id="sub-about">
+          <a href="about.html">О сообществе</a>
+          <a href="experts.html">Эксперты и наставники</a>
+          <a href="stories.html">Истории участников</a>
+        </div>
+      </div>
       <a href="clubs.html">Клубы</a>
       <a href="programs.html">Программы</a>
-      <a href="events.html">События</a>
-      <a href="index.html#eco">Экосистема</a>
+      <a href="events.html">Афиша</a>
+      <a href="#eco">Экосистема</a>
+      <a href="join.html">Участие</a>
     </nav>
-
-    <a class="btn btn--quiet top__cta" href="join.html">Стать участником</a>
+    <div class="hdr-act">
+      <button class="btn btn-primary btn-sm" type="button" data-open-modal>Стать участником</button>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav" id="burger">
+        <svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
   </div>
 </header>
 
-<main id="main">
-  <section class="hero field">
-    <div class="container hero__in">
-      <div class="hero__say">
-        <h1>Пространство роста, единства и созидания</h1>
-        <p class="lead">Будь здоров. Будь счастлив. Будь богат. Будь предпринимателем.</p>
-        <div class="actions">
-          <a class="btn btn--primary" href="join.html">Стать участником</a>
-          <a class="btn btn--quiet" href="clubs.html">Наши клубы</a>
-        </div>
-      </div>
+<div class="mnav" id="mnav">
+  <div class="wrap">
+    <ul>
+      <li class="mgroup"><span>О сообществе</span><ul>
+        <li><a href="about.html">О сообществе</a></li>
+        <li><a href="experts.html">Эксперты и наставники</a></li>
+        <li><a href="stories.html">Истории участников</a></li>
+      </ul></li>
+      <li><a href="clubs.html">Клубы</a></li>
+      <li><a href="programs.html">Программы</a></li>
+      <li><a href="events.html">Афиша</a></li>
+      <li><a href="#eco">Экосистема</a></li>
+      <li><a href="join.html">Участие</a></li>
+    </ul>
+    <button class="btn btn-primary" type="button" data-open-modal>Стать участником</button>
+  </div>
+</div>
 
-      <dl class="plate">
-        <div class="plate__row plate__row--lead">
-          <dt>Первый клуб</dt>
-          <dd class="plate__big">Шымкент, Орынбаева 23</dd>
-        </div>
-        <div class="plate__row">
-          <dt>Часы работы</dt>
-          <dd>ежедневно с 9:00 до 20:00</dd>
-        </div>
-        <div class="plate__row">
-          <dt>Запуск</dt>
-          <dd><time datetime="2026-12-15">15 декабря 2026 года</time></dd>
-        </div>
-        <div class="plate__row">
-          <dt>Условия</dt>
-          <dd>участие в клубе не требует вступления в MLM-бизнес</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
+<main id="top">
 
-  <section class="sec" id="programs">
-    <div class="container">
-      <div class="head">
-        <h2>Четыре программы в каждом клубе</h2>
-        <p class="lead">Здоровье. Гармония отношений. Благосостояние. Бизнес.</p>
-      </div>
-      <ul class="guide">
-        <li>
-          <h3>Будь здоров</h3>
-          <p>Здоровье, энергия и активное долголетие.</p>
-        </li>
-        <li>
-          <h3>Будь счастлив</h3>
-          <p>Гармония, отношения и личностный рост.</p>
-        </li>
-        <li>
-          <h3>Будь богат</h3>
-          <p>Финансовая грамотность, достаток и материальное благополучие.</p>
-        </li>
-        <li>
-          <h3>Будь предпринимателем</h3>
-          <p>Предпринимательское мышление, лидерство и новые источники дохода.</p>
-        </li>
-      </ul>
-      <p class="note">Каждая программа идёт четырьмя ступенями: вводный курс, практика, мастер-классы и углублённый уровень. Они открыты и новичкам, и опытным лидерам. <a href="programs.html">Подробно о программах</a>.</p>
-    </div>
-  </section>
+  <!-- ================= HERO =================
+       Фотографий от заказчицы пока нет (в брифе «уточнить»), поэтому герой — фирменное
+       зелёное поле со штриховкой. Когда снимок придёт: вернуть блок .hero-media
+       с <picture>, как на сайте СДЖ, остальную разметку не трогать. -->
+  <section class="hero">
+    <div class="hero-veil"></div>
+    <div class="hero-rule" id="hero-rule"></div>
 
-  <section class="sec sec--warm sec--wide">
-    <div class="container claim-grid">
+    <div class="wrap hero-in">
       <div>
-        <p class="claim">Больше, чем бизнес. Больше, чем клуб.</p>
-        <p class="claim__line">Мы объединяем людей, которые стремятся не просто жить лучше сегодня, но и создавать прочную основу для благополучного и процветающего будущего.</p>
+        <span class="eyebrow on-dark" data-hero>Здоровье · Гармония отношений · Благосостояние · Бизнес</span>
+        <h1 data-hero>Пространство роста, единства и <span class="gold">созидания</span></h1>
+        <p class="hero-lead" data-hero>Мы объединяем людей, которые стремятся к осознанной жизни, личностному росту и предпринимательскому развитию. В наших региональных клубах вы найдёте знания, поддержку, общение и возможности для реализации своего потенциала.</p>
+        <div class="hero-cta" data-hero>
+          <button class="btn btn-gold" type="button" data-open-modal>Стать участником</button>
+          <a class="btn btn-ghost-light" href="clubs.html">Наши клубы</a>
+        </div>
       </div>
-      <p class="philo">Процветание человека. Благополучие семьи. Развитие общества.</p>
+    </div>
+
+    <div class="hero-strip">
+      <div class="wrap">
+        <ul>
+          <li data-strip><b data-count="4" data-pad="2">04</b><span>Программы развития</span></li>
+          <li data-strip><b data-count="3" data-pad="2">03</b><span>Зоны в каждом клубе</span></li>
+          <li data-strip><b>9:00–20:00</b><span>Ежедневно в клубе</span></li>
+          <li data-strip><b>15.12.2026</b><span>Запуск сообщества</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section class="sec sec--botwide field" id="club">
-    <div class="container">
-      <div class="head">
-        <h2>Что происходит в клубе</h2>
-        <p class="lead">Каждый региональный клуб работает по единым стандартам и делится на три зоны.</p>
+  <!-- ================= ПРОГРАММЫ ================= -->
+  <section class="sec sec-surface" id="programs">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="eyebrow">Программы развития</span>
+        <h2 class="h2">Четыре направления развития</h2>
+        <p class="lead" style="margin-top:1rem">Основа всей образовательной системы клубов. Программы доступны и новичкам, и опытным лидерам: вводный курс, практика, мастер-классы, углублённый уровень.</p>
       </div>
-      <ul class="zones">
-        <li>
-          <h3>Клуб общения и ЗОЖ</h3>
-          <p>Полезные завтраки, дегустации, встречи.</p>
-        </li>
-        <li>
-          <h3>Кабинет здоровья</h3>
-          <p>Замеры и консультации специалистов по записи.</p>
-        </li>
-        <li>
-          <h3>Центр обучения и развития</h3>
-          <p>Четыре программы, тренинги и мастер-классы.</p>
-        </li>
+      <p style="margin-top:-1.5rem;margin-bottom:2rem"><a class="tlink" href="programs.html">Подробно о каждой программе<svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></p>
+      <div class="dirs">
+        <article class="dircard" data-rv>
+          <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-heart-pulse"/></svg></span>
+          <span class="n">01</span>
+          <h3>«Будь здоров»</h3>
+          <p>Здоровье, энергия и активное долголетие.</p>
+        </article>
+        <article class="dircard" data-rv>
+          <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-smile"/></svg></span>
+          <span class="n">02</span>
+          <h3>«Будь счастлив»</h3>
+          <p>Гармония, отношения и личностный рост.</p>
+        </article>
+        <article class="dircard" data-rv>
+          <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-banknote"/></svg></span>
+          <span class="n">03</span>
+          <h3>«Будь богат»</h3>
+          <p>Финансовая грамотность, достаток и материальное благополучие.</p>
+        </article>
+        <article class="dircard" data-rv>
+          <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-rocket"/></svg></span>
+          <span class="n">04</span>
+          <h3>«Будь предпринимателем»</h3>
+          <p>Предпринимательское мышление, лидерство и создание новых источников дохода.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= О СООБЩЕСТВЕ ================= -->
+  <section class="sec" id="about">
+    <div class="wrap about-grid">
+      <div data-rv>
+        <span class="eyebrow">О сообществе</span>
+        <h2 class="h2">Больше, чем бизнес. Больше, чем клуб.</h2>
+        <p class="lead" style="margin-top:1.25rem">ASYL ALEM LIFE — сильное сообщество единомышленников, объединённых стремлением к здоровью, счастью, финансовому благополучию и процветанию. Мы создаём пространство возможностей, где каждый может раскрывать свой потенциал и создавать лучшее будущее для себя и своей семьи.</p>
+        <p style="margin-top:1.5rem"><a class="tlink" href="about.html">Подробнее о сообществе<svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></p>
+        <ul class="checks">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Знания и полезные навыки для личностного роста</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Укрепление здоровья и активное долголетие</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Управление личными финансами и рост доходов</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Реализация предпринимательских идей</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Живое общение, обмен опытом и взаимная поддержка</span></li>
+        </ul>
+      </div>
+
+      <div data-rv>
+        <div class="chair">
+          <figure class="chair-shot">
+            <picture>
+              <source srcset="assets/photo-chair.webp" type="image/webp" />
+              <img src="assets/photo-chair.jpg" alt="Алма Архабаева, основатель экосистемы ASYL ARMAN" width="600" height="800" loading="lazy" />
+            </picture>
+          </figure>
+          <div class="chair-body">
+            <span class="lbl">Основатель экосистемы ASYL ARMAN</span>
+            <span class="nm">Алма Архабаева</span>
+            <p>ASYL ALEM LIFE — новое направление экосистемы. В неё входят интернет-магазин ASYL ALEM, санаторий ASYL ARMAN, производство ASYL ARMAN HERBS, Академия MLM PRO и Фонд Asyl Arman.</p>
+          </div>
+        </div>
+        <div class="sincecard">
+          <b>2026</b>
+          <span>Сообщество ASYL ALEM LIFE запускается 15 декабря 2026 года.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= КЛУБЫ ================= -->
+  <section class="sec rc on-dark" id="club">
+    <div class="wrap">
+      <div class="sec-head" data-rv style="margin-bottom:0">
+        <span class="eyebrow on-dark">Региональные клубы</span>
+        <h2 class="h2">Каждый клуб — три зоны</h2>
+        <p class="lead" style="margin-top:1rem">Клубы работают по единым стандартам. Формат — от компактного пространства до полноценного центра. Первый клуб — в Шымкенте, Орынбаева 23.</p>
+      </div>
+      <p style="margin-top:1.5rem"><a class="tlink on-dark" href="clubs.html">Подробнее о клубах<svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></p>
+      <ul class="rcgrid rc3">
+        <li data-rv><svg class="ic ic-lg" aria-hidden="true"><use href="#i-coffee"/></svg><b>Клуб общения и ЗОЖ</b><p>Полезные завтраки, дегустации, встречи.</p></li>
+        <li data-rv><svg class="ic ic-lg" aria-hidden="true"><use href="#i-stethoscope"/></svg><b>Кабинет здоровья</b><p>Замеры, консультации специалистов по записи.</p></li>
+        <li data-rv><svg class="ic ic-lg" aria-hidden="true"><use href="#i-cap"/></svg><b>Центр обучения и развития</b><p>Четыре программы, тренинги, мастер-классы.</p></li>
       </ul>
-      <p class="note">Формат меняется от компактного пространства до полноценного центра. В каждом клубе есть руководитель, обученные спикеры, календарь мероприятий и регистрация участников.</p>
     </div>
   </section>
 
-  <section class="sec sec--topwide" id="eco">
-    <div class="container">
-      <div class="head">
-        <h2>Магазин и сообщество делят работу</h2>
-        <p class="lead">ASYL ALEM LIFE стало новым направлением экосистемы ASYL ARMAN.</p>
+  <!-- ================= КАК ВСТУПИТЬ ================= -->
+  <section class="sec sec-surface" id="how">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="eyebrow">Схема участия</span>
+        <h2 class="h2">Как стать участником</h2>
       </div>
-      <table class="tbl">
-        <thead>
-          <tr>
-            <th scope="col"><span class="visually-hidden">Что сравнивается</span></th>
-            <th scope="col">ASYL ALEM</th>
-            <th scope="col">ASYL ALEM LIFE</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Чем занимается</th>
-            <td><span class="tbl__lab" aria-hidden="true">ASYL ALEM</span>Продажи и партнёрский бизнес</td>
-            <td><span class="tbl__lab" aria-hidden="true">ASYL ALEM LIFE</span>Развитие человека, предпринимательская культура и сообщество</td>
-          </tr>
-          <tr>
-            <th scope="row">Где это происходит</th>
-            <td><span class="tbl__lab" aria-hidden="true">ASYL ALEM</span>Интернет-магазин</td>
-            <td><span class="tbl__lab" aria-hidden="true">ASYL ALEM LIFE</span>Сеть региональных клубов</td>
-          </tr>
-          <tr>
-            <th scope="row">Личный кабинет</th>
-            <td><span class="tbl__lab" aria-hidden="true">ASYL ALEM</span>Товарооборот, структура дистрибьюторов и начисления</td>
-            <td><span class="tbl__lab" aria-hidden="true">ASYL ALEM LIFE</span>Не дублируются: эти данные остаются в магазине</td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Адрес интернет-магазина ASYL ALEM в брифе помечен «уточнить».
-           Когда он придёт, подставить его в NAV («Магазин») в .build/build.py и сюда. -->
-      <p class="note">В экосистему входят также санаторий ASYL ARMAN, производство ASYL ARMAN HERBS, Академия MLM PRO и Фонд Asyl Arman. Экосистему основала Алма Архабаева.</p>
+      <div class="flow-grid">
+        <article class="flowcard" data-rv>
+          <h3><span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-users"/></svg></span>Путь участника</h3>
+          <ol class="flow">
+            <li><i aria-hidden="true"></i>Заявка «Стать участником» на сайте</li>
+            <li><i aria-hidden="true"></i>Выбор клуба в своём городе</li>
+            <li><i aria-hidden="true"></i>Регистрация участника в клубе</li>
+            <li><i aria-hidden="true"></i>Участие во встречах и программах</li>
+          </ol>
+        </article>
+        <article class="flowcard" data-rv>
+          <h3><span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-sprout"/></svg></span>Ступени каждой программы</h3>
+          <ol class="flow">
+            <li><i aria-hidden="true"></i>Вводный курс</li>
+            <li><i aria-hidden="true"></i>Практика</li>
+            <li><i aria-hidden="true"></i>Мастер-классы</li>
+            <li><i aria-hidden="true"></i>Углублённый уровень</li>
+          </ol>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="sec sec--warm" id="join">
-    <div class="container join">
-      <div class="join__say">
-        <h2>Стать участником</h2>
-        <ol class="steps">
-          <li>Оставить заявку на сайте</li>
-          <li>Выбрать клуб в своём городе</li>
-          <li>Прийти на встречи и программы</li>
-        </ol>
-        <p class="note">В сообществе три клуба: потребителей, предпринимателей и основателей. Условия вступления сейчас утверждаются и появятся на сайте до запуска.</p>
-        <p class="note">Позвонить: <span class="fill" data-fill="phone">телефон уточняется</span>. Написать: <span class="fill" data-fill="email">адрес уточняется</span>.</p>
+  <!-- ================= ЭКОСИСТЕМА ================= -->
+  <section class="sec" id="eco">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="eyebrow">Экосистема ASYL ARMAN</span>
+        <h2 class="h2">Магазин и сообщество делят работу</h2>
+        <p class="lead" style="margin-top:1rem">ASYL ALEM отвечает за продажи и партнёрский бизнес, ASYL ALEM LIFE — за развитие человека, предпринимательскую культуру и сообщество. Сайт сообщества не дублирует магазин.</p>
+      </div>
+      <div class="recog">
+        <article class="recogcard" data-rv>
+          <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-store"/></svg></span>
+          <b>Интернет-магазин ASYL ALEM</b>
+          <p>Продажи и партнёрский бизнес. Финансовая аналитика, товарооборот, структура дистрибьюторов и начисления — в защищённом личном кабинете магазина.</p>
+          <!-- Адрес магазина в брифе помечен «уточнить». Когда придёт — поставить ссылку здесь и в NAV. -->
+          <span class="soon" style="margin-top:1rem">Ссылка уточняется</span>
+        </article>
+        <article class="recogcard" data-rv>
+          <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-users"/></svg></span>
+          <b>ASYL ALEM LIFE</b>
+          <p>Развитие человека, предпринимательская культура и сообщество: региональные клубы, программы и встречи.</p>
+        </article>
+        <article class="recogcard" data-rv>
+          <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-layers"/></svg></span>
+          <b>Ещё четыре направления</b>
+          <p>Санаторий ASYL ARMAN, производство ASYL ARMAN HERBS, Академия MLM PRO и Фонд Asyl Arman.</p>
+        </article>
       </div>
 
-        <form class="form" data-endpoint="" novalidate>
-          <div class="field-row">
-            <label for="f-name">Имя</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required />
+      <ul class="stats" style="margin-top:2.75rem">
+        <li data-rv><span class="v" data-count="12" data-pad="2">12</span><span class="l">Месяцев в году работают клубы</span></li>
+        <li data-rv><span class="v" data-count="3" data-pad="2">03</span><span class="l">Клуба: потребителей, предпринимателей, основателей</span></li>
+        <li data-rv><span class="v" data-count="6" data-pad="2">06</span><span class="l">Направлений экосистемы ASYL ARMAN</span></li>
+        <li data-rv><span class="v">2026</span><span class="l">Год запуска сообщества</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= ВОПРОСЫ ================= -->
+  <section class="sec sec-surface" id="faq">
+    <div class="wrap faq-grid">
+      <div data-rv>
+        <span class="eyebrow">Вопросы и ответы</span>
+        <h2 class="h2">Коротко о главном</h2>
+        <p class="lead" style="margin-top:1rem">Не нашли ответ — оставьте заявку, ответим в рабочее время.</p>
+        <a class="btn btn-outline" href="join.html" style="margin-top:1.75rem">Как вступить</a>
+      </div>
+
+      <div class="acc" data-rv>
+        <details open>
+          <summary>Нужно ли вступать в MLM-бизнес?<svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+          <div class="body">Нет. Участие в клубе не требует вступления в MLM-бизнес. В клубы приходят клиенты, гости и жители региона, а дистрибьюторы ASYL ALEM организуют деятельность и развивают клубы.</div>
+        </details>
+        <details>
+          <summary>Кому подходит сообщество?<svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+          <div class="body">Потребителям, гостям и жителям региона, предпринимателям — всем, кто стремится к здоровью, счастью, благополучию и развитию. Описание «сообщество осознанных MLM-предпринимателей» относится только к программе «Будь предпринимателем» и клубу предпринимателей.</div>
+        </details>
+        <details>
+          <summary>Сколько стоит участие?<svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+          <!-- Условия и суммы в брифе помечены «уточнить»: не публикуем до утверждения. -->
+          <div class="body">Условия вступления и оплаты сейчас утверждаются. Они появятся на сайте до запуска сообщества; суммы до этого мы не публикуем.</div>
+        </details>
+        <details>
+          <summary>Где находится клуб?<svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+          <div class="body">Первый клуб — в Шымкенте, Орынбаева 23, ежедневно с 9:00 до 20:00. Сеть клубов развивается по Казахстану, в дальнейшем — и за его пределами.</div>
+        </details>
+        <details>
+          <summary>Подойдут ли программы новичку?<svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+          <div class="body">Да. Каждая программа начинается с вводного курса, дальше — практика, мастер-классы и углублённый уровень. Программы доступны и новичкам, и опытным лидерам.</div>
+        </details>
+        <details>
+          <summary>Чем сообщество отличается от магазина ASYL ALEM?<svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+          <div class="body">Магазин отвечает за продажи и партнёрский бизнес, сообщество — за развитие человека, предпринимательскую культуру и живое общение. Продукция для здоровья — через интернет-магазин ASYL ALEM, производство ASYL ARMAN HERBS.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= АФИША И ИСТОРИИ =================
+       ЗАГЛУШКИ: карточки описывают будущие разделы, без дат, имён и вымышленных заголовков. -->
+  <section class="sec" id="news">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="eyebrow">Афиша и истории</span>
+        <h2 class="h2">Что появится после запуска</h2>
+      </div>
+      <div class="newsgrid">
+        <article class="ncard" data-rv>
+          <span class="soon">Календарь готовится</span>
+          <h3>Встречи и мастер-классы</h3>
+          <p>Полезные завтраки, дегустации, тренинги и мастер-классы первого клуба.</p>
+        </article>
+        <article class="ncard" data-rv>
+          <span class="soon">Состав собирается</span>
+          <h3>Наставники клуба</h3>
+          <p>Руководитель клуба, обученные спикеры, специалисты кабинета здоровья и основатели клубов.</p>
+        </article>
+        <article class="ncard" data-rv>
+          <span class="soon">После запуска</span>
+          <h3>Истории участников</h3>
+          <p>Реальные истории развития — только с согласия участников, без выдуманных отзывов.</p>
+        </article>
+      </div>
+      <p class="tpl-note">Разделы наполняются: <a href="events.html" style="color:var(--brand);font-weight:600">афиша</a>, <a href="experts.html" style="color:var(--brand);font-weight:600">наставники</a>, <a href="stories.html" style="color:var(--brand);font-weight:600">истории</a>.</p>
+    </div>
+  </section>
+
+  <!-- ================= КОНТАКТЫ ================= -->
+  <section class="sec contact on-dark" id="contacts">
+    <div class="wrap cgrid">
+      <div data-rv>
+        <span class="eyebrow on-dark">Контакты</span>
+        <h2 class="h2">Стать участником</h2>
+        <p class="lead" style="margin-top:1rem">Оставьте заявку — подскажем ближайший клуб и встречу. Участие в клубе не требует вступления в MLM-бизнес.</p>
+        <ul class="clist">
+          <li>
+            <span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <span><span class="k">Телефон</span><span class="v"><em class="fill">уточняется</em></span></span>
+          </li>
+          <li>
+            <span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <span><span class="k">Адрес клуба</span><span class="v">Казахстан, г. Шымкент, Орынбаева 23</span></span>
+          </li>
+          <li>
+            <span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <span><span class="k">График работы</span><span class="v">Ежедневно 9:00–20:00<em>Клубы работают круглый год</em></span></span>
+          </li>
+          <li>
+            <span class="fi"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg></span>
+            <span><span class="k">География</span><span class="v">Казахстан<em>В дальнейшем — и за его пределами</em></span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form" data-rv>
+        <h3>Оставить заявку</h3>
+        <p class="hint">Заявка → выбор клуба в своём городе → участие во встречах и программах.</p>
+        <form class="fgrid" id="p-form" data-lead="#p-success" data-endpoint="" novalidate>
+          <div>
+            <label for="p-name">Имя *</label>
+            <input id="p-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required />
           </div>
-          <div class="field-row">
-            <label for="f-phone">Телефон</label>
-            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7" required />
+          <div>
+            <label for="p-phone">Телефон *</label>
+            <input id="p-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 ___ ___ __ __" required />
           </div>
-          <div class="field-row">
-            <label for="f-city">Город</label>
-            <input id="f-city" name="city" type="text" autocomplete="address-level2" />
+          <div>
+            <label for="p-city">Город</label>
+            <input id="p-city" name="city" type="text" autocomplete="address-level2" placeholder="Где вам удобен клуб" />
           </div>
-          <div class="field-row">
-            <label for="f-club">Какой клуб ближе</label>
-            <select id="f-club" name="club">
-              <option value="">Пока не выбрал</option>
+          <div>
+            <label for="p-club">Какой клуб ближе</label>
+            <select id="p-club" name="club">
+              <option value="">Пока не выбрал(а)</option>
               <option>Клуб потребителей</option>
               <option>Клуб предпринимателей</option>
               <option>Клуб основателей</option>
             </select>
           </div>
-          <button class="btn btn--primary" type="submit">Отправить заявку</button>
-          <p class="form__help" aria-live="polite"></p>
+          <div class="full">
+            <label for="p-note">Вопрос или пожелание</label>
+            <textarea id="p-note" name="note" rows="3" placeholder="Например: интересует программа «Будь здоров»"></textarea>
+          </div>
+          <div class="full">
+            <button class="btn btn-gold" type="submit">Отправить заявку</button>
+          </div>
+          <p class="msg" aria-live="polite"></p>
+          <p class="note full">Данные используются только для связи по заявке.</p>
         </form>
+        <div class="fsuccess" id="p-success" hidden>
+          <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-check"/></svg></span>
+          <h3>Заявка получена</h3>
+          <p>Спасибо! Руководитель клуба свяжется с вами в рабочее время: ежедневно 9:00–20:00.</p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="foot field">
-  <div class="container">
-    <p class="foot__sign">ASYL ALEM LIFE</p>
-    <p class="foot__line">Объединяемся, развиваемся, процветаем.</p>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span><b>ASYL ALEM LIFE</b><span>Сообщество развития</span></span>
+        </a>
+        <p class="ftr-about">ASYL ALEM LIFE — объединяемся, развиваемся, процветаем! Сеть региональных клубов для здоровья, гармонии отношений, благосостояния и бизнеса.</p>
+      </div>
 
-    <nav class="foot__nav" aria-label="Разделы сайта">
-      <a href="about.html">О сообществе</a>
-      <a href="clubs.html">Наши клубы</a>
-      <a href="programs.html">Программы развития</a>
-      <a href="events.html">Афиша событий</a>
-      <a href="experts.html">Эксперты и наставники</a>
-      <a href="stories.html">Истории участников</a>
-      <a href="join.html">Стать участником</a>
-    </nav>
+      <nav class="ftr-col" aria-label="Разделы сайта">
+        <h3>Разделы</h3>
+        <ul>
+          <li><a href="about.html">О сообществе</a></li>
+          <li><a href="clubs.html">Наши клубы</a></li>
+          <li><a href="programs.html">Программы развития</a></li>
+          <li><a href="events.html">Афиша событий</a></li>
+          <li><a href="experts.html">Эксперты и наставники</a></li>
+          <li><a href="stories.html">Истории участников</a></li>
+          <li><a href="join.html">Стать участником</a></li>
+        </ul>
+      </nav>
 
-    <p class="foot__legal">ТОО «ASYL ALEM LIFE». Казахстан, Шымкент, Орынбаева 23. Ежедневно с 9:00 до 20:00.</p>
+      <nav class="ftr-col" aria-label="Контакты">
+        <h3>Контакты</h3>
+        <ul>
+          <li>г. Шымкент, Орынбаева 23</li>
+          <li>Ежедневно 9:00–20:00</li>
+          <li>Телефон: <em class="fill">уточняется</em></li>
+          <li><a href="#eco">Экосистема ASYL ARMAN</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="ftr-bot">
+      <span>© 2026 ТОО «ASYL ALEM LIFE»</span>
+      <span>Направление экосистемы ASYL ARMAN</span>
+    </div>
   </div>
 </footer>
 
-<script>
-document.documentElement.classList.add('js');
-(() => {
-  const burger = document.querySelector('.burger');
-  const menu = document.getElementById('menu');
-  if (!burger || !menu) return;
-  const set = (open) => {
-    burger.setAttribute('aria-expanded', String(open));
-    menu.classList.toggle('is-open', open);
-  };
-  burger.addEventListener('click', () => set(burger.getAttribute('aria-expanded') !== 'true'));
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') { set(false); burger.focus(); }
-  });
-})();
+<!-- Заявка открывается модальным окном: кнопки в шапке и на страницах ведут сюда,
+     чтобы оставить заявку можно было с любого экрана без прокрутки вниз. -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-bd" data-close-modal></div>
+  <div class="modal-panel form" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <div>
+        <span class="eyebrow">Заявка</span>
+        <h2 id="modal-title">Стать участником</h2>
+      </div>
+      <button class="modal-x" type="button" aria-label="Закрыть окно" data-close-modal>
+        <svg class="ic" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+    <p class="modal-hint">Заявка → выбор клуба в своём городе → участие во встречах и программах. Поля со звёздочкой обязательны.</p>
+        <form class="fgrid" id="m-form" data-lead="#m-success" data-endpoint="" novalidate>
+          <div>
+            <label for="m-name">Имя *</label>
+            <input id="m-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required />
+          </div>
+          <div>
+            <label for="m-phone">Телефон *</label>
+            <input id="m-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 ___ ___ __ __" required />
+          </div>
+          <div>
+            <label for="m-city">Город</label>
+            <input id="m-city" name="city" type="text" autocomplete="address-level2" placeholder="Где вам удобен клуб" />
+          </div>
+          <div>
+            <label for="m-club">Какой клуб ближе</label>
+            <select id="m-club" name="club">
+              <option value="">Пока не выбрал(а)</option>
+              <option>Клуб потребителей</option>
+              <option>Клуб предпринимателей</option>
+              <option>Клуб основателей</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="m-note">Вопрос или пожелание</label>
+            <textarea id="m-note" name="note" rows="3" placeholder="Например: интересует программа «Будь здоров»"></textarea>
+          </div>
+          <div class="full">
+            <button class="btn btn-gold" type="submit">Отправить заявку</button>
+          </div>
+          <p class="msg" aria-live="polite"></p>
+          <p class="note full">Данные используются только для связи по заявке.</p>
+        </form>
+        <div class="fsuccess" id="m-success" hidden>
+          <span class="fi"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-check"/></svg></span>
+          <h3>Заявка получена</h3>
+          <p>Спасибо! Руководитель клуба свяжется с вами в рабочее время: ежедневно 9:00–20:00.</p>
+        </div>
+  </div>
+</div>
 
-(() => {
-  for (const form of document.querySelectorAll('form[data-endpoint]')) {
-    const help = form.querySelector('[aria-live]');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let bad = null;
-      for (const el of form.querySelectorAll('[required]')) {
-        const ok = el.checkValidity() && el.value.trim() !== '';
-        el.toggleAttribute('aria-invalid', !ok);
-        if (!ok && !bad) bad = el;
-      }
-      if (bad) { help.textContent = 'Заполните обязательные поля: имя и телефон.'; bad.focus(); return; }
-      if (!form.dataset.endpoint) {
-        help.textContent = 'Заявка никуда не ушла: форма пока не подключена к почте.';
-        return;
-      }
-      fetch(form.dataset.endpoint, { method: 'POST', body: new FormData(form) })
-        .then((r) => { help.textContent = r.ok ? 'Заявка получена, свяжемся в рабочее время.' : 'Не отправилось. Попробуйте через минуту.'; })
-        .catch(() => { help.textContent = 'Не отправилось. Попробуйте через минуту.'; });
-    });
-  }
-})();
-</script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>
