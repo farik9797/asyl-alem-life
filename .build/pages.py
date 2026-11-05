@@ -216,14 +216,14 @@ INDEX = f'''  <!-- ================= HERO =================
   </section>
 
   <!-- ================= КЛУБЫ ================= -->
-  <section class="sec rc on-dark" id="club">
+  <section class="sec rc sec-surface" id="club">
     <div class="wrap">
       <div class="rc-head">
         <div data-rv>
-          <span class="eyebrow on-dark">Региональные клубы</span>
+          <span class="eyebrow">Региональные клубы</span>
           <h2 class="h2">Каждый клуб — три зоны</h2>
           <p class="lead" style="margin-top:1rem">Клубы работают по единым стандартам. Формат — от компактного пространства до полноценного центра. Первый клуб — в Шымкенте, Орынбаева 23.</p>
-          <p style="margin-top:1rem">{tlink("clubs.html", "Подробнее о клубах", dark=True)}</p>
+          <p style="margin-top:1rem">{tlink("clubs.html", "Подробнее о клубах")}</p>
         </div>
         {RESOURCE}
       </div>
@@ -232,7 +232,7 @@ INDEX = f'''  <!-- ================= HERO =================
   </section>
 
   <!-- ================= КАК ВСТУПИТЬ ================= -->
-  <section class="sec sec-surface" id="how">
+  <section class="sec" id="how">
     <div class="wrap">
       <div class="sec-head row">
         <div data-rv>
@@ -255,7 +255,7 @@ INDEX = f'''  <!-- ================= HERO =================
   </section>
 
   <!-- ================= ЭКОСИСТЕМА ================= -->
-  <section class="sec" id="eco">
+  <section class="sec sec-surface" id="eco">
     <div class="wrap">
       <div class="sec-head" data-rv>
         <span class="eyebrow">Экосистема ASYL ARMAN</span>
@@ -267,7 +267,7 @@ INDEX = f'''  <!-- ================= HERO =================
   </section>
 
   <!-- ================= ВОПРОСЫ ================= -->
-  <section class="sec sec-surface" id="faq">
+  <section class="sec" id="faq">
     <div class="wrap faq-grid">
       <div data-rv>
         <span class="eyebrow">Вопросы и ответы</span>
@@ -308,7 +308,7 @@ INDEX = f'''  <!-- ================= HERO =================
 
   <!-- ================= АФИША И ИСТОРИИ =================
        ЗАГЛУШКИ: карточки описывают будущие разделы, без дат, имён и вымышленных заголовков. -->
-  <section class="sec" id="news">
+  <section class="sec sec-surface" id="news">
     <div class="wrap">
       <div class="sec-head" data-rv>
         <span class="eyebrow">Афиша и истории</span>
@@ -432,11 +432,11 @@ CLUBS = f'''  <section class="sec">
     </div>
   </section>
 
-  <section class="sec rc on-dark">
+  <section class="sec rc sec-surface">
     <div class="wrap">
       <div class="rc-head">
         <div data-rv>
-          <span class="eyebrow on-dark">Единые стандарты</span>
+          <span class="eyebrow">Единые стандарты</span>
           <h2 class="h2">Три зоны в каждом клубе</h2>
           <p class="lead" style="margin-top:1rem">Формат — от компактного пространства до полноценного центра. Набор зон в любом городе один и тот же.</p>
         </div>
@@ -446,7 +446,7 @@ CLUBS = f'''  <section class="sec">
     </div>
   </section>
 
-  <section class="sec sec-surface">
+  <section class="sec">
     <div class="wrap">
       <div class="sec-head" data-rv>
         <span class="eyebrow">Стандарт клуба</span>
@@ -461,7 +461,7 @@ CLUBS = f'''  <section class="sec">
     </div>
   </section>
 
-  <section class="sec">
+  <section class="sec sec-surface">
     <div class="wrap">
       <div class="sec-head" data-rv>
         <span class="eyebrow">Внутри сообщества</span>

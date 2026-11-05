@@ -33,7 +33,7 @@
   --sh-md:0 4px 6px -1px rgba(39,46,15,.07), 0 12px 24px -8px rgba(39,46,15,.12);
 }
 /* тёмные блоки: акцент переключается на бежевый */
-.rc,.sincecard,.modal-panel,.contact .form,.ftr,.cpage .form,.on-dark{
+.sincecard,.modal-panel,.contact .form,.ftr,.cpage .form,.on-dark{
   --gold:#ded8c6;--gold-ink:#272e0f;--gold-hover:#f2f2f2;--gold-rgb:222,216,198}
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
@@ -735,3 +735,12 @@ select{font:inherit;color:inherit}
 .contact .clist em{color:var(--ink-soft)}
 .contact .clist a{color:var(--brand)}
 .contact .form{background:var(--navy-deep);border-color:rgba(255,255,255,.16);color:#fff}
+
+/* блок клуба — тоже светлый: бежевый фон, зоны белыми плитками */
+.rc{background:var(--surface);color:var(--ink)}
+.rc .shot{background:var(--card)}
+.rcgrid li{background:var(--card);border:1px solid var(--hair)}
+.rcgrid .ic{color:var(--brand)}
+.rcgrid p{color:var(--ink-soft)}
+/* контакты идут после бежевого блока — теперь на белом */
+.contact{background:var(--white)}
